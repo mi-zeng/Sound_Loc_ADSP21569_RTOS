@@ -53,49 +53,14 @@
 			<locationURI>CCES/SHARC/lib/src/drivers/Source/uart/adi_uart.c</locationURI>
 		</link>
 		<link>
-			<name>system/services/dai/adi_dai.c</name>
-			<type>1</type>
-			<locationURI>CCES/SHARC/lib/src/services/Source/dai/adi_dai.c</locationURI>
-		</link>
-		<link>
 			<name>system/services/dma/adi_dma.c</name>
 			<type>1</type>
 			<locationURI>CCES/SHARC/lib/src/services/Source/dma/adi_dma.c</locationURI>
 		</link>
 		<link>
-			<name>system/services/gpio/adi_gpio.c</name>
-			<type>1</type>
-			<locationURI>CCES/SHARC/lib/src/services/Source/gpio/adi_gpio.c</locationURI>
-		</link>
-		<link>
 			<name>system/services/pdma/adi_pdma_2156x.c</name>
 			<type>1</type>
 			<locationURI>CCES/SHARC/lib/src/services/Source/pdma/adi_pdma_2156x.c</locationURI>
-		</link>
-		<link>
-			<name>system/services/pwr/adi_pwr.c</name>
-			<type>1</type>
-			<locationURI>CCES/SHARC/lib/src/services/Source/pwr/adi_pwr.c</locationURI>
-		</link>
-		<link>
-			<name>system/services/stdio/adi_stdio.c</name>
-			<type>1</type>
-			<locationURI>CCES/SHARC/lib/src/services/Source/stdio/adi_stdio.c</locationURI>
-		</link>
-		<link>
-			<name>system/services/stdio/adi_stdio_jtag.c</name>
-			<type>1</type>
-			<locationURI>CCES/SHARC/lib/src/services/Source/stdio/adi_stdio_jtag.c</locationURI>
-		</link>
-		<link>
-			<name>system/services/stdio/adi_stdio_null.c</name>
-			<type>1</type>
-			<locationURI>CCES/SHARC/lib/src/services/Source/stdio/adi_stdio_null.c</locationURI>
-		</link>
-		<link>
-			<name>system/services/stdio/adi_stdio_uart.c</name>
-			<type>1</type>
-			<locationURI>CCES/SHARC/lib/src/services/Source/stdio/adi_stdio_uart.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

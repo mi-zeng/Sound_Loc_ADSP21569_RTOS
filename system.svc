@@ -85,16 +85,12 @@ It provides information needed to link your code. It can be used to configure me
 		<configuration id="com.analog.crosscore.ssldd.pinmux.component">
 			<pinmux-configuration processor="ADSP-21569" version="1.0">
 				<peripheral description="UART" name="UART0">
-					<signal bit="18" mux="1" name="CTS" pin="9" port="A"/>
-					<signal bit="16" mux="1" name="RTS" pin="8" port="A"/>
 					<signal bit="14" mux="1" name="RX" pin="7" port="A"/>
 					<signal bit="12" mux="1" name="TX" pin="6" port="A"/>
 				</peripheral>
 				<gpio name="Port A">
 					<signal bit="12" name="PA06" pin="6" port="A"/>
 					<signal bit="14" name="PA07" pin="7" port="A"/>
-					<signal bit="16" name="PA08" pin="8" port="A"/>
-					<signal bit="18" name="PA09" pin="9" port="A"/>
 				</gpio>
 			</pinmux-configuration>
 		</configuration>
@@ -162,20 +158,20 @@ It provides information needed to link your code. It can be used to configure me
 		<configuration id="com.analog.crosscore.addins.ssldd.sport.adsp2156x.sharcxi">
 			<com.analog.crosscore.addins.ssldd.sport.sharcxi>
 				<schema>1.0</schema>
-				<sport0aselected>1</sport0aselected>
-				<sport_instance_defaultvalue>1</sport_instance_defaultvalue>
+				<sport0aselected>0</sport0aselected>
+				<sport_instance_defaultvalue>4</sport_instance_defaultvalue>
 				<sport0a_dma_default_mode>1</sport0a_dma_default_mode>
-				<sport0bselected>0</sport0bselected>
+				<sport0bselected>1</sport0bselected>
 				<sport1aselected>0</sport1aselected>
-				<sport1bselected>0</sport1bselected>
+				<sport1bselected>1</sport1bselected>
 				<sport2aselected>0</sport2aselected>
 				<sport2bselected>0</sport2bselected>
 				<sport3aselected>0</sport3aselected>
 				<sport3bselected>0</sport3bselected>
 				<sport4aselected>0</sport4aselected>
-				<sport4bselected>0</sport4bselected>
+				<sport4bselected>1</sport4bselected>
 				<sport5aselected>0</sport5aselected>
-				<sport5bselected>0</sport5bselected>
+				<sport5bselected>1</sport5bselected>
 				<sport6aselected>0</sport6aselected>
 				<sport6bselected>0</sport6bselected>
 				<sport7aselected>0</sport7aselected>
@@ -202,7 +198,7 @@ It provides information needed to link your code. It can be used to configure me
 					<word_length_0A>31</word_length_0A>
 					<word_length_I2S_0A>24</word_length_I2S_0A>
 					<sport0a_RightJustified>Disable</sport0a_RightJustified>
-					<sport0a_sptran_val>Transmit</sport0a_sptran_val>
+					<sport0a_sptran_val>Receive</sport0a_sptran_val>
 					<sport0a_Internalclock>External clock</sport0a_Internalclock>
 					<sport0a_ClockEdge>Falling Edge</sport0a_ClockEdge>
 					<sport0a_GatedClock>Disable</sport0a_GatedClock>
@@ -253,7 +249,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_i2swordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_i2swordlengthpsize_value>
 					<sport0a_packingenable>0</sport0a_packingenable>
 					<sport0a_rightjustiifed>0</sport0a_rightjustiifed>
-					<sport0a_sptran>1</sport0a_sptran>
+					<sport0a_sptran>0</sport0a_sptran>
 					<sport0a_internalclock>0</sport0a_internalclock>
 					<sport0a_clockededge>0</sport0a_clockededge>
 					<sport0a_gatedclock>0</sport0a_gatedclock>
@@ -268,7 +264,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_fsdiv_default0A>31</sport0a_fsdiv_default0A>
 					<sport0a_fsdiv_value>31</sport0a_fsdiv_value>
 					<sport0a_i2sfsdiv_value>31</sport0a_i2sfsdiv_value>
-					<sport0ai2sselected>1</sport0ai2sselected>
+					<sport0ai2sselected>0</sport0ai2sselected>
 					<sport0bi2sselected>0</sport0bi2sselected>
 					<sport1ai2sselected>0</sport1ai2sselected>
 					<sport1bi2sselected>0</sport1bi2sselected>
@@ -373,14 +369,14 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_lsbormsb>MSB First</sport0a_lsbormsb>
 					<sport0a_packing>Disable</sport0a_packing>
 					<word_length_0A>31</word_length_0A>
-					<word_length_I2S_0A>31</word_length_I2S_0A>
+					<word_length_I2S_0A>23</word_length_I2S_0A>
 					<sport0a_RightJustified>Disable</sport0a_RightJustified>
 					<sport0a_sptran_val>Receive</sport0a_sptran_val>
-					<sport0a_Internalclock>Internal clock</sport0a_Internalclock>
-					<sport0a_ClockEdge>Falling Edge</sport0a_ClockEdge>
+					<sport0a_Internalclock>External clock</sport0a_Internalclock>
+					<sport0a_ClockEdge>Rising Edge</sport0a_ClockEdge>
 					<sport0a_GatedClock>Disable</sport0a_GatedClock>
 					<sport0a_Framesyncreq>Yes</sport0a_Framesyncreq>
-					<sport0a_Framesync>Internal</sport0a_Framesync>
+					<sport0a_Framesync>External</sport0a_Framesync>
 					<sport0a_datadep>Data Dependent</sport0a_datadep>
 					<sport0a_lfs_serial>Active High</sport0a_lfs_serial>
 					<sport0a_lfs_i2s>Right Channel First</sport0a_lfs_i2s>
@@ -389,9 +385,9 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_opmode_serial>Early FS</sport0a_opmode_serial>
 					<sport0a_opmode_i2s>I2S mode</sport0a_opmode_i2s>
 					<sport0a_fsedgedetect>Level Detect</sport0a_fsedgedetect>
-					<clkdiv_0A>0</clkdiv_0A>
+					<clkdiv_0A>32</clkdiv_0A>
 					<fsdiv_0A>31</fsdiv_0A>
-					<fsdiv_i2s0A>31</fsdiv_i2s0A>
+					<fsdiv_i2s0A>23</fsdiv_i2s0A>
 					<sport0a_multpackingdma>Enable</sport0a_multpackingdma>
 					<delaycount_0A>0</delaycount_0A>
 					<start_channel_0A>0</start_channel_0A>
@@ -421,28 +417,28 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_wordlength_value>31</sport0a_wordlength_value>
 					<sport0a_wordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_wordlengthmsize_value>
 					<sport0a_wordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_wordlengthpsize_value>
-					<sport0a_i2swordlength_value>31</sport0a_i2swordlength_value>
+					<sport0a_i2swordlength_value>23</sport0a_i2swordlength_value>
 					<sport0a_i2swordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_i2swordlengthmsize_value>
 					<sport0a_i2swordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_i2swordlengthpsize_value>
 					<sport0a_packingenable>0</sport0a_packingenable>
 					<sport0a_rightjustiifed>0</sport0a_rightjustiifed>
 					<sport0a_sptran>0</sport0a_sptran>
-					<sport0a_internalclock>1</sport0a_internalclock>
-					<sport0a_clockededge>0</sport0a_clockededge>
+					<sport0a_internalclock>0</sport0a_internalclock>
+					<sport0a_clockededge>1</sport0a_clockededge>
 					<sport0a_gatedclock>0</sport0a_gatedclock>
 					<sport0a_framesyncreq>1</sport0a_framesyncreq>
-					<sport0a_framesync>1</sport0a_framesync>
+					<sport0a_framesync>0</sport0a_framesync>
 					<sport0a_dataindependent>0</sport0a_dataindependent>
 					<sport0a_lfsserial>0</sport0a_lfsserial>
 					<sport0a_lafsserial>0</sport0a_lafsserial>
 					<sport0a_fsed>0</sport0a_fsed>
-					<sport0a_clkdiv_default0A>0</sport0a_clkdiv_default0A>
-					<sport0a_clkdiv_value>0</sport0a_clkdiv_value>
+					<sport0a_clkdiv_default0A>32</sport0a_clkdiv_default0A>
+					<sport0a_clkdiv_value>32</sport0a_clkdiv_value>
 					<sport0a_fsdiv_default0A>31</sport0a_fsdiv_default0A>
 					<sport0a_fsdiv_value>31</sport0a_fsdiv_value>
-					<sport0a_i2sfsdiv_value>31</sport0a_i2sfsdiv_value>
+					<sport0a_i2sfsdiv_value>23</sport0a_i2sfsdiv_value>
 					<sport0ai2sselected>0</sport0ai2sselected>
-					<sport0bi2sselected>0</sport0bi2sselected>
+					<sport0bi2sselected>1</sport0bi2sselected>
 					<sport1ai2sselected>0</sport1ai2sselected>
 					<sport1bi2sselected>0</sport1bi2sselected>
 					<sport2ai2sselected>0</sport2ai2sselected>
@@ -538,6 +534,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_windowoffset_value>0</sport0a_windowoffset_value>
 					<framedelay_0A>0</framedelay_0A>
 					<sport0a_framedelay_value>0</sport0a_framedelay_value>
+					<schema>1.0</schema>
 				</SPORT0BInitialization__>
 				<SPORT1AInitialization__>
 					<sport0a_mode_default>I2S</sport0a_mode_default>
@@ -545,17 +542,17 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_lsbormsb>MSB First</sport0a_lsbormsb>
 					<sport0a_packing>Disable</sport0a_packing>
 					<word_length_0A>31</word_length_0A>
-					<word_length_I2S_0A>31</word_length_I2S_0A>
+					<word_length_I2S_0A>24</word_length_I2S_0A>
 					<sport0a_RightJustified>Disable</sport0a_RightJustified>
 					<sport0a_sptran_val>Receive</sport0a_sptran_val>
-					<sport0a_Internalclock>Internal clock</sport0a_Internalclock>
+					<sport0a_Internalclock>External clock</sport0a_Internalclock>
 					<sport0a_ClockEdge>Falling Edge</sport0a_ClockEdge>
 					<sport0a_GatedClock>Disable</sport0a_GatedClock>
 					<sport0a_Framesyncreq>Yes</sport0a_Framesyncreq>
-					<sport0a_Framesync>Internal</sport0a_Framesync>
-					<sport0a_datadep>Data Dependent</sport0a_datadep>
+					<sport0a_Framesync>External</sport0a_Framesync>
+					<sport0a_datadep>Data Independent</sport0a_datadep>
 					<sport0a_lfs_serial>Active High</sport0a_lfs_serial>
-					<sport0a_lfs_i2s>Right Channel First</sport0a_lfs_i2s>
+					<sport0a_lfs_i2s>Left Channel First</sport0a_lfs_i2s>
 					<sport0a_lfs_tdm>Rising Edge</sport0a_lfs_tdm>
 					<sport0a_lfs_leftjustified>Left Channel First</sport0a_lfs_leftjustified>
 					<sport0a_opmode_serial>Early FS</sport0a_opmode_serial>
@@ -563,7 +560,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_fsedgedetect>Level Detect</sport0a_fsedgedetect>
 					<clkdiv_0A>0</clkdiv_0A>
 					<fsdiv_0A>31</fsdiv_0A>
-					<fsdiv_i2s0A>31</fsdiv_i2s0A>
+					<fsdiv_i2s0A>32</fsdiv_i2s0A>
 					<sport0a_multpackingdma>Enable</sport0a_multpackingdma>
 					<delaycount_0A>0</delaycount_0A>
 					<start_channel_0A>0</start_channel_0A>
@@ -593,18 +590,18 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_wordlength_value>31</sport0a_wordlength_value>
 					<sport0a_wordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_wordlengthmsize_value>
 					<sport0a_wordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_wordlengthpsize_value>
-					<sport0a_i2swordlength_value>31</sport0a_i2swordlength_value>
+					<sport0a_i2swordlength_value>24</sport0a_i2swordlength_value>
 					<sport0a_i2swordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_i2swordlengthmsize_value>
 					<sport0a_i2swordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_i2swordlengthpsize_value>
 					<sport0a_packingenable>0</sport0a_packingenable>
 					<sport0a_rightjustiifed>0</sport0a_rightjustiifed>
 					<sport0a_sptran>0</sport0a_sptran>
-					<sport0a_internalclock>1</sport0a_internalclock>
+					<sport0a_internalclock>0</sport0a_internalclock>
 					<sport0a_clockededge>0</sport0a_clockededge>
 					<sport0a_gatedclock>0</sport0a_gatedclock>
 					<sport0a_framesyncreq>1</sport0a_framesyncreq>
-					<sport0a_framesync>1</sport0a_framesync>
-					<sport0a_dataindependent>0</sport0a_dataindependent>
+					<sport0a_framesync>0</sport0a_framesync>
+					<sport0a_dataindependent>1</sport0a_dataindependent>
 					<sport0a_lfsserial>0</sport0a_lfsserial>
 					<sport0a_lafsserial>0</sport0a_lafsserial>
 					<sport0a_fsed>0</sport0a_fsed>
@@ -612,7 +609,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_clkdiv_value>0</sport0a_clkdiv_value>
 					<sport0a_fsdiv_default0A>31</sport0a_fsdiv_default0A>
 					<sport0a_fsdiv_value>31</sport0a_fsdiv_value>
-					<sport0a_i2sfsdiv_value>31</sport0a_i2sfsdiv_value>
+					<sport0a_i2sfsdiv_value>32</sport0a_i2sfsdiv_value>
 					<sport0ai2sselected>0</sport0ai2sselected>
 					<sport0bi2sselected>0</sport0bi2sselected>
 					<sport1ai2sselected>0</sport1ai2sselected>
@@ -629,7 +626,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport6bi2sselected>0</sport6bi2sselected>
 					<sport7ai2sselected>0</sport7ai2sselected>
 					<sport7bi2sselected>0</sport7bi2sselected>
-					<sport0a_lfsi2s>0</sport0a_lfsi2s>
+					<sport0a_lfsi2s>1</sport0a_lfsi2s>
 					<sport0a_lfstdm>1</sport0a_lfstdm>
 					<sport0a_lfsljust>0</sport0a_lfsljust>
 					<sport0a_lafsi2s>0</sport0a_lafsi2s>
@@ -710,6 +707,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_windowoffset_value>0</sport0a_windowoffset_value>
 					<framedelay_0A>0</framedelay_0A>
 					<sport0a_framedelay_value>0</sport0a_framedelay_value>
+					<schema>1.0</schema>
 				</SPORT1AInitialization__>
 				<SPORT1BInitialization__>
 					<sport0a_mode_default>I2S</sport0a_mode_default>
@@ -717,14 +715,14 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_lsbormsb>MSB First</sport0a_lsbormsb>
 					<sport0a_packing>Disable</sport0a_packing>
 					<word_length_0A>31</word_length_0A>
-					<word_length_I2S_0A>31</word_length_I2S_0A>
+					<word_length_I2S_0A>23</word_length_I2S_0A>
 					<sport0a_RightJustified>Disable</sport0a_RightJustified>
 					<sport0a_sptran_val>Receive</sport0a_sptran_val>
-					<sport0a_Internalclock>Internal clock</sport0a_Internalclock>
-					<sport0a_ClockEdge>Falling Edge</sport0a_ClockEdge>
+					<sport0a_Internalclock>External clock</sport0a_Internalclock>
+					<sport0a_ClockEdge>Rising Edge</sport0a_ClockEdge>
 					<sport0a_GatedClock>Disable</sport0a_GatedClock>
 					<sport0a_Framesyncreq>Yes</sport0a_Framesyncreq>
-					<sport0a_Framesync>Internal</sport0a_Framesync>
+					<sport0a_Framesync>External</sport0a_Framesync>
 					<sport0a_datadep>Data Dependent</sport0a_datadep>
 					<sport0a_lfs_serial>Active High</sport0a_lfs_serial>
 					<sport0a_lfs_i2s>Right Channel First</sport0a_lfs_i2s>
@@ -733,9 +731,9 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_opmode_serial>Early FS</sport0a_opmode_serial>
 					<sport0a_opmode_i2s>I2S mode</sport0a_opmode_i2s>
 					<sport0a_fsedgedetect>Level Detect</sport0a_fsedgedetect>
-					<clkdiv_0A>0</clkdiv_0A>
+					<clkdiv_0A>32</clkdiv_0A>
 					<fsdiv_0A>31</fsdiv_0A>
-					<fsdiv_i2s0A>31</fsdiv_i2s0A>
+					<fsdiv_i2s0A>23</fsdiv_i2s0A>
 					<sport0a_multpackingdma>Enable</sport0a_multpackingdma>
 					<delaycount_0A>0</delaycount_0A>
 					<start_channel_0A>0</start_channel_0A>
@@ -765,30 +763,30 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_wordlength_value>31</sport0a_wordlength_value>
 					<sport0a_wordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_wordlengthmsize_value>
 					<sport0a_wordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_wordlengthpsize_value>
-					<sport0a_i2swordlength_value>31</sport0a_i2swordlength_value>
+					<sport0a_i2swordlength_value>23</sport0a_i2swordlength_value>
 					<sport0a_i2swordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_i2swordlengthmsize_value>
 					<sport0a_i2swordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_i2swordlengthpsize_value>
 					<sport0a_packingenable>0</sport0a_packingenable>
 					<sport0a_rightjustiifed>0</sport0a_rightjustiifed>
 					<sport0a_sptran>0</sport0a_sptran>
-					<sport0a_internalclock>1</sport0a_internalclock>
-					<sport0a_clockededge>0</sport0a_clockededge>
+					<sport0a_internalclock>0</sport0a_internalclock>
+					<sport0a_clockededge>1</sport0a_clockededge>
 					<sport0a_gatedclock>0</sport0a_gatedclock>
 					<sport0a_framesyncreq>1</sport0a_framesyncreq>
-					<sport0a_framesync>1</sport0a_framesync>
+					<sport0a_framesync>0</sport0a_framesync>
 					<sport0a_dataindependent>0</sport0a_dataindependent>
 					<sport0a_lfsserial>0</sport0a_lfsserial>
 					<sport0a_lafsserial>0</sport0a_lafsserial>
 					<sport0a_fsed>0</sport0a_fsed>
-					<sport0a_clkdiv_default0A>0</sport0a_clkdiv_default0A>
-					<sport0a_clkdiv_value>0</sport0a_clkdiv_value>
+					<sport0a_clkdiv_default0A>32</sport0a_clkdiv_default0A>
+					<sport0a_clkdiv_value>32</sport0a_clkdiv_value>
 					<sport0a_fsdiv_default0A>31</sport0a_fsdiv_default0A>
 					<sport0a_fsdiv_value>31</sport0a_fsdiv_value>
-					<sport0a_i2sfsdiv_value>31</sport0a_i2sfsdiv_value>
+					<sport0a_i2sfsdiv_value>23</sport0a_i2sfsdiv_value>
 					<sport0ai2sselected>0</sport0ai2sselected>
 					<sport0bi2sselected>0</sport0bi2sselected>
 					<sport1ai2sselected>0</sport1ai2sselected>
-					<sport1bi2sselected>0</sport1bi2sselected>
+					<sport1bi2sselected>1</sport1bi2sselected>
 					<sport2ai2sselected>0</sport2ai2sselected>
 					<sport2bi2sselected>0</sport2bi2sselected>
 					<sport3ai2sselected>0</sport3ai2sselected>
@@ -882,6 +880,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_windowoffset_value>0</sport0a_windowoffset_value>
 					<framedelay_0A>0</framedelay_0A>
 					<sport0a_framedelay_value>0</sport0a_framedelay_value>
+					<schema>1.0</schema>
 				</SPORT1BInitialization__>
 				<SPORT2AInitialization__>
 					<sport0a_mode_default>I2S</sport0a_mode_default>
@@ -1749,14 +1748,14 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_lsbormsb>MSB First</sport0a_lsbormsb>
 					<sport0a_packing>Disable</sport0a_packing>
 					<word_length_0A>31</word_length_0A>
-					<word_length_I2S_0A>31</word_length_I2S_0A>
+					<word_length_I2S_0A>23</word_length_I2S_0A>
 					<sport0a_RightJustified>Disable</sport0a_RightJustified>
 					<sport0a_sptran_val>Receive</sport0a_sptran_val>
-					<sport0a_Internalclock>Internal clock</sport0a_Internalclock>
-					<sport0a_ClockEdge>Falling Edge</sport0a_ClockEdge>
+					<sport0a_Internalclock>External clock</sport0a_Internalclock>
+					<sport0a_ClockEdge>Rising Edge</sport0a_ClockEdge>
 					<sport0a_GatedClock>Disable</sport0a_GatedClock>
 					<sport0a_Framesyncreq>Yes</sport0a_Framesyncreq>
-					<sport0a_Framesync>Internal</sport0a_Framesync>
+					<sport0a_Framesync>External</sport0a_Framesync>
 					<sport0a_datadep>Data Dependent</sport0a_datadep>
 					<sport0a_lfs_serial>Active High</sport0a_lfs_serial>
 					<sport0a_lfs_i2s>Right Channel First</sport0a_lfs_i2s>
@@ -1765,9 +1764,9 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_opmode_serial>Early FS</sport0a_opmode_serial>
 					<sport0a_opmode_i2s>I2S mode</sport0a_opmode_i2s>
 					<sport0a_fsedgedetect>Level Detect</sport0a_fsedgedetect>
-					<clkdiv_0A>0</clkdiv_0A>
+					<clkdiv_0A>32</clkdiv_0A>
 					<fsdiv_0A>31</fsdiv_0A>
-					<fsdiv_i2s0A>31</fsdiv_i2s0A>
+					<fsdiv_i2s0A>23</fsdiv_i2s0A>
 					<sport0a_multpackingdma>Enable</sport0a_multpackingdma>
 					<delaycount_0A>0</delaycount_0A>
 					<start_channel_0A>0</start_channel_0A>
@@ -1797,26 +1796,26 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_wordlength_value>31</sport0a_wordlength_value>
 					<sport0a_wordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_wordlengthmsize_value>
 					<sport0a_wordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_wordlengthpsize_value>
-					<sport0a_i2swordlength_value>31</sport0a_i2swordlength_value>
+					<sport0a_i2swordlength_value>23</sport0a_i2swordlength_value>
 					<sport0a_i2swordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_i2swordlengthmsize_value>
 					<sport0a_i2swordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_i2swordlengthpsize_value>
 					<sport0a_packingenable>0</sport0a_packingenable>
 					<sport0a_rightjustiifed>0</sport0a_rightjustiifed>
 					<sport0a_sptran>0</sport0a_sptran>
-					<sport0a_internalclock>1</sport0a_internalclock>
-					<sport0a_clockededge>0</sport0a_clockededge>
+					<sport0a_internalclock>0</sport0a_internalclock>
+					<sport0a_clockededge>1</sport0a_clockededge>
 					<sport0a_gatedclock>0</sport0a_gatedclock>
 					<sport0a_framesyncreq>1</sport0a_framesyncreq>
-					<sport0a_framesync>1</sport0a_framesync>
+					<sport0a_framesync>0</sport0a_framesync>
 					<sport0a_dataindependent>0</sport0a_dataindependent>
 					<sport0a_lfsserial>0</sport0a_lfsserial>
 					<sport0a_lafsserial>0</sport0a_lafsserial>
 					<sport0a_fsed>0</sport0a_fsed>
-					<sport0a_clkdiv_default0A>0</sport0a_clkdiv_default0A>
-					<sport0a_clkdiv_value>0</sport0a_clkdiv_value>
+					<sport0a_clkdiv_default0A>32</sport0a_clkdiv_default0A>
+					<sport0a_clkdiv_value>32</sport0a_clkdiv_value>
 					<sport0a_fsdiv_default0A>31</sport0a_fsdiv_default0A>
 					<sport0a_fsdiv_value>31</sport0a_fsdiv_value>
-					<sport0a_i2sfsdiv_value>31</sport0a_i2sfsdiv_value>
+					<sport0a_i2sfsdiv_value>23</sport0a_i2sfsdiv_value>
 					<sport0ai2sselected>0</sport0ai2sselected>
 					<sport0bi2sselected>0</sport0bi2sselected>
 					<sport1ai2sselected>0</sport1ai2sselected>
@@ -1826,7 +1825,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport3ai2sselected>0</sport3ai2sselected>
 					<sport3bi2sselected>0</sport3bi2sselected>
 					<sport4ai2sselected>0</sport4ai2sselected>
-					<sport4bi2sselected>0</sport4bi2sselected>
+					<sport4bi2sselected>1</sport4bi2sselected>
 					<sport5ai2sselected>0</sport5ai2sselected>
 					<sport5bi2sselected>0</sport5bi2sselected>
 					<sport6ai2sselected>0</sport6ai2sselected>
@@ -1914,6 +1913,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_windowoffset_value>0</sport0a_windowoffset_value>
 					<framedelay_0A>0</framedelay_0A>
 					<sport0a_framedelay_value>0</sport0a_framedelay_value>
+					<schema>1.0</schema>
 				</SPORT4BInitialization__>
 				<SPORT5AInitialization__>
 					<sport0a_mode_default>I2S</sport0a_mode_default>
@@ -2093,14 +2093,14 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_lsbormsb>MSB First</sport0a_lsbormsb>
 					<sport0a_packing>Disable</sport0a_packing>
 					<word_length_0A>31</word_length_0A>
-					<word_length_I2S_0A>31</word_length_I2S_0A>
+					<word_length_I2S_0A>23</word_length_I2S_0A>
 					<sport0a_RightJustified>Disable</sport0a_RightJustified>
 					<sport0a_sptran_val>Receive</sport0a_sptran_val>
-					<sport0a_Internalclock>Internal clock</sport0a_Internalclock>
-					<sport0a_ClockEdge>Falling Edge</sport0a_ClockEdge>
+					<sport0a_Internalclock>External clock</sport0a_Internalclock>
+					<sport0a_ClockEdge>Rising Edge</sport0a_ClockEdge>
 					<sport0a_GatedClock>Disable</sport0a_GatedClock>
 					<sport0a_Framesyncreq>Yes</sport0a_Framesyncreq>
-					<sport0a_Framesync>Internal</sport0a_Framesync>
+					<sport0a_Framesync>External</sport0a_Framesync>
 					<sport0a_datadep>Data Dependent</sport0a_datadep>
 					<sport0a_lfs_serial>Active High</sport0a_lfs_serial>
 					<sport0a_lfs_i2s>Right Channel First</sport0a_lfs_i2s>
@@ -2109,9 +2109,9 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_opmode_serial>Early FS</sport0a_opmode_serial>
 					<sport0a_opmode_i2s>I2S mode</sport0a_opmode_i2s>
 					<sport0a_fsedgedetect>Level Detect</sport0a_fsedgedetect>
-					<clkdiv_0A>0</clkdiv_0A>
+					<clkdiv_0A>32</clkdiv_0A>
 					<fsdiv_0A>31</fsdiv_0A>
-					<fsdiv_i2s0A>31</fsdiv_i2s0A>
+					<fsdiv_i2s0A>23</fsdiv_i2s0A>
 					<sport0a_multpackingdma>Enable</sport0a_multpackingdma>
 					<delaycount_0A>0</delaycount_0A>
 					<start_channel_0A>0</start_channel_0A>
@@ -2141,26 +2141,26 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_wordlength_value>31</sport0a_wordlength_value>
 					<sport0a_wordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_wordlengthmsize_value>
 					<sport0a_wordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_wordlengthpsize_value>
-					<sport0a_i2swordlength_value>31</sport0a_i2swordlength_value>
+					<sport0a_i2swordlength_value>23</sport0a_i2swordlength_value>
 					<sport0a_i2swordlengthmsize_value>ENUM_DMA_CFG_MSIZE04</sport0a_i2swordlengthmsize_value>
 					<sport0a_i2swordlengthpsize_value>ENUM_DMA_CFG_PSIZE04</sport0a_i2swordlengthpsize_value>
 					<sport0a_packingenable>0</sport0a_packingenable>
 					<sport0a_rightjustiifed>0</sport0a_rightjustiifed>
 					<sport0a_sptran>0</sport0a_sptran>
-					<sport0a_internalclock>1</sport0a_internalclock>
-					<sport0a_clockededge>0</sport0a_clockededge>
+					<sport0a_internalclock>0</sport0a_internalclock>
+					<sport0a_clockededge>1</sport0a_clockededge>
 					<sport0a_gatedclock>0</sport0a_gatedclock>
 					<sport0a_framesyncreq>1</sport0a_framesyncreq>
-					<sport0a_framesync>1</sport0a_framesync>
+					<sport0a_framesync>0</sport0a_framesync>
 					<sport0a_dataindependent>0</sport0a_dataindependent>
 					<sport0a_lfsserial>0</sport0a_lfsserial>
 					<sport0a_lafsserial>0</sport0a_lafsserial>
 					<sport0a_fsed>0</sport0a_fsed>
-					<sport0a_clkdiv_default0A>0</sport0a_clkdiv_default0A>
-					<sport0a_clkdiv_value>0</sport0a_clkdiv_value>
+					<sport0a_clkdiv_default0A>32</sport0a_clkdiv_default0A>
+					<sport0a_clkdiv_value>32</sport0a_clkdiv_value>
 					<sport0a_fsdiv_default0A>31</sport0a_fsdiv_default0A>
 					<sport0a_fsdiv_value>31</sport0a_fsdiv_value>
-					<sport0a_i2sfsdiv_value>31</sport0a_i2sfsdiv_value>
+					<sport0a_i2sfsdiv_value>23</sport0a_i2sfsdiv_value>
 					<sport0ai2sselected>0</sport0ai2sselected>
 					<sport0bi2sselected>0</sport0bi2sselected>
 					<sport1ai2sselected>0</sport1ai2sselected>
@@ -2172,7 +2172,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport4ai2sselected>0</sport4ai2sselected>
 					<sport4bi2sselected>0</sport4bi2sselected>
 					<sport5ai2sselected>0</sport5ai2sselected>
-					<sport5bi2sselected>0</sport5bi2sselected>
+					<sport5bi2sselected>1</sport5bi2sselected>
 					<sport6ai2sselected>0</sport6ai2sselected>
 					<sport6bi2sselected>0</sport6bi2sselected>
 					<sport7ai2sselected>0</sport7ai2sselected>
@@ -2258,6 +2258,7 @@ It provides information needed to link your code. It can be used to configure me
 					<sport0a_windowoffset_value>0</sport0a_windowoffset_value>
 					<framedelay_0A>0</framedelay_0A>
 					<sport0a_framedelay_value>0</sport0a_framedelay_value>
+					<schema>1.0</schema>
 				</SPORT5BInitialization__>
 				<SPORT6AInitialization__>
 					<sport0a_mode_default>I2S</sport0a_mode_default>
@@ -2947,7 +2948,7 @@ It provides information needed to link your code. It can be used to configure me
 					<framedelay_0A>0</framedelay_0A>
 					<sport0a_framedelay_value>0</sport0a_framedelay_value>
 				</SPORT7BInitialization__>
-				<sport_instance>1</sport_instance>
+				<sport_instance>4</sport_instance>
 			</com.analog.crosscore.addins.ssldd.sport.sharcxi>
 		</configuration>
 		<configuration id="com.analog.sourcegen.component.startup_ldf">
@@ -3044,80 +3045,75 @@ It provides information needed to link your code. It can be used to configure me
 		</configuration>
 		<configuration id="com.analog.crosscore.addins.freertos">
 			<freertos-addin-cfg>
-				<configUSE_MALLOC_FAILED_HOOK>1</configUSE_MALLOC_FAILED_HOOK>
-				<INCLUDE_xResumeFromISR>0</INCLUDE_xResumeFromISR>
-				<INCLUDE_vTaskDelete>1</INCLUDE_vTaskDelete>
+				<configMAX_PRIORITIES>7</configMAX_PRIORITIES>
+				<configTIMER_TASK_PRIORITY>6</configTIMER_TASK_PRIORITY>
 				<configMAX_CO_ROUTINE_PRIORITIES>2</configMAX_CO_ROUTINE_PRIORITIES>
 				<configMAX_API_CALL_INTERRUPT_PRIORITY>18</configMAX_API_CALL_INTERRUPT_PRIORITY>
-				<INCLUDE_vTaskPrioritySet>1</INCLUDE_vTaskPrioritySet>
-				<portCONFIGURE_TIMER_FOR_RUN_TIME_STATS/>
-				<configCOMMAND_INT_MAX_OUTPUT_SIZE>2096</configCOMMAND_INT_MAX_OUTPUT_SIZE>
-				<configUSE_TRACE_FACILITY>0</configUSE_TRACE_FACILITY>
-				<INCLUDE_xTaskGetSchedulerState>0</INCLUDE_xTaskGetSchedulerState>
-				<configUNIQUE_INTERRUPT_PRIORITIES>0</configUNIQUE_INTERRUPT_PRIORITIES>
-				<configSUPPORT_DYNAMIC_ALLOCATION>1</configSUPPORT_DYNAMIC_ALLOCATION>
-				<configUSE_PORT_OPTIMISED_TASK_SELECTION>1</configUSE_PORT_OPTIMISED_TASK_SELECTION>
-				<configUSE_PREEMPTION>1</configUSE_PREEMPTION>
-				<configUSE_TICK_HOOK>0</configUSE_TICK_HOOK>
-				<configUSE_IDLE_HOOK>0</configUSE_IDLE_HOOK>
-				<INCLUDE_xTaskDelayUntil>1</INCLUDE_xTaskDelayUntil>
-				<configMAX_TASK_NAME_LEN>10</configMAX_TASK_NAME_LEN>
-				<INCLUDE_xTaskGetHandle>0</INCLUDE_xTaskGetHandle>
-				<configUSE_CO_ROUTINES>0</configUSE_CO_ROUTINES>
-				<configTIMER_TASK_PRIORITY>6</configTIMER_TASK_PRIORITY>
-				<configUSE_TICKLESS_IDLE>0</configUSE_TICKLESS_IDLE>
-				<INCLUDE_eTaskGetState>1</INCLUDE_eTaskGetState>
-				<configUSE_TASK_NOTIFICATIONS>1</configUSE_TASK_NOTIFICATIONS>
-				<INCLUDE_uxTaskPriorityGet>1</INCLUDE_uxTaskPriorityGet>
-				<configGENERATE_RUN_TIME_STATS>0</configGENERATE_RUN_TIME_STATS>
-				<INCLUDE_xTaskGetIdleTaskHandle>0</INCLUDE_xTaskGetIdleTaskHandle>
-				<configUSE_DAEMON_TASK_STARTUP_HOOK>1</configUSE_DAEMON_TASK_STARTUP_HOOK>
-				<configENABLE_BACKWARD_COMPATIBILITY>1</configENABLE_BACKWARD_COMPATIBILITY>
-				<configTIMER_TASK_STACK_DEPTH>400</configTIMER_TASK_STACK_DEPTH>
-				<configNUM_THREAD_LOCAL_STORAGE_POINTERS>1</configNUM_THREAD_LOCAL_STORAGE_POINTERS>
-				<INCLUDE_xTimerPendFunctionCall>1</INCLUDE_xTimerPendFunctionCall>
-				<portGET_RUN_TIME_COUNTER_VALUE>( ( uint32_t ) ( alt_globaltmr_get64() &gt;&gt; ( uint64_t ) 16 ) )</portGET_RUN_TIME_COUNTER_VALUE>
 				<configAPPLICATION_ALLOCATED_HEAP>0</configAPPLICATION_ALLOCATED_HEAP>
-				<configINTERRUPT_CONTROLLER_CPU_INTERFACE_OFFSET>0</configINTERRUPT_CONTROLLER_CPU_INTERFACE_OFFSET>
-				<INCLUDE_vTaskSuspend>1</INCLUDE_vTaskSuspend>
-				<configUSE_NEWLIB_REENTRANT>0</configUSE_NEWLIB_REENTRANT>
-				<INCLUDE_xTaskAbortDelay>0</INCLUDE_xTaskAbortDelay>
-				<configUSE_TIMERS>1</configUSE_TIMERS>
-				<configTIMER_QUEUE_LENGTH>5</configTIMER_QUEUE_LENGTH>
-				<configIDLE_SHOULD_YIELD>1</configIDLE_SHOULD_YIELD>
-				<configMAX_PRIORITIES>7</configMAX_PRIORITIES>
-				<INCLUDE_vTaskDelay>1</INCLUDE_vTaskDelay>
-				<configTASK_NOTIFICATION_ARRAY_ENTRIES>1</configTASK_NOTIFICATION_ARRAY_ENTRIES>
-				<configMINIMAL_STACK_SIZE>200</configMINIMAL_STACK_SIZE>
-				<configCHECK_FOR_STACK_OVERFLOW>2</configCHECK_FOR_STACK_OVERFLOW>
-				<INCLUDE_xTaskGetCurrentTaskHandle>0</INCLUDE_xTaskGetCurrentTaskHandle>
-				<configTASK_RETURN_ADDRESS>NULL</configTASK_RETURN_ADDRESS>
-				<INCLUDE_xEventGroupSetBitFromISR>0</INCLUDE_xEventGroupSetBitFromISR>
-				<configUSE_16_BIT_TICKS>0</configUSE_16_BIT_TICKS>
-				<configUSE_TIME_SLICING>0</configUSE_TIME_SLICING>
-				<INCLUDE_vTaskCleanUpResources>1</INCLUDE_vTaskCleanUpResources>
-				<configTOTAL_HEAP_SIZE>51200</configTOTAL_HEAP_SIZE>
-				<configUSE_MUTEXES>1</configUSE_MUTEXES>
-				<configTICK_RATE_HZ>1000</configTICK_RATE_HZ>
-				<configQUEUE_REGISTRY_SIZE>8</configQUEUE_REGISTRY_SIZE>
-				<INCLUDE_uxTaskGetStackHighWaterMark>0</INCLUDE_uxTaskGetStackHighWaterMark>
-				<configINTERRUPT_CONTROLLER_BASE_ADDRESS>0</configINTERRUPT_CONTROLLER_BASE_ADDRESS>
-				<configUSE_STATS_FORMATTING_FUNCTIONS>0</configUSE_STATS_FORMATTING_FUNCTIONS>
-				<configUSE_COUNTING_SEMAPHORES>1</configUSE_COUNTING_SEMAPHORES>
 				<configSUPPORT_STATIC_ALLOCATION>1</configSUPPORT_STATIC_ALLOCATION>
-				<configUSE_RECURSIVE_MUTEXES>1</configUSE_RECURSIVE_MUTEXES>
-				<configUSE_APPLICATION_TASK_TAG>0</configUSE_APPLICATION_TASK_TAG>
-				<configINCLUDE_APPLICATION_DEFINED_PRIVILEGED_FUNCTIONS>0</configINCLUDE_APPLICATION_DEFINED_PRIVILEGED_FUNCTIONS>
-				<configSETUP_TICK_INTERRUPT>vConfigureTickInterrupt();</configSETUP_TICK_INTERRUPT>
-				<INCLUDE_xTaskResumeFromISR>0</INCLUDE_xTaskResumeFromISR>
-				<INCLUDE_userStartupTask>1</INCLUDE_userStartupTask>
-				<INCLUDE_xSemaphoreGetMutexHolder>0</INCLUDE_xSemaphoreGetMutexHolder>
-				<configUSE_QUEUE_SETS>1</configUSE_QUEUE_SETS>
-				<configCPU_CLOCK_HZ>1000</configCPU_CLOCK_HZ>
-				<FREERTOS_COMMIT_ID>f115d71a1c3d159fcb6f150036c88d6108549509</FREERTOS_COMMIT_ID>
+				<configSUPPORT_DYNAMIC_ALLOCATION>1</configSUPPORT_DYNAMIC_ALLOCATION>
+				<configTOTAL_HEAP_SIZE>51200</configTOTAL_HEAP_SIZE>
 				<configTOTAL_HEAP_SIZE_UI>51200</configTOTAL_HEAP_SIZE_UI>
 				<configTOTAL_HEAP_SIZE_UNIT>0</configTOTAL_HEAP_SIZE_UNIT>
+				<configMAX_TASK_NAME_LEN>10</configMAX_TASK_NAME_LEN>
+				<configNUM_THREAD_LOCAL_STORAGE_POINTERS>1</configNUM_THREAD_LOCAL_STORAGE_POINTERS>
+				<configMINIMAL_STACK_SIZE>200</configMINIMAL_STACK_SIZE>
+				<configUSE_PORT_OPTIMISED_TASK_SELECTION>1</configUSE_PORT_OPTIMISED_TASK_SELECTION>
+				<configUSE_TASK_NOTIFICATIONS>1</configUSE_TASK_NOTIFICATIONS>
+				<configTASK_NOTIFICATION_ARRAY_ENTRIES>1</configTASK_NOTIFICATION_ARRAY_ENTRIES>
+				<configUSE_APPLICATION_TASK_TAG>0</configUSE_APPLICATION_TASK_TAG>
+				<configUSE_QUEUE_SETS>1</configUSE_QUEUE_SETS>
+				<configQUEUE_REGISTRY_SIZE>8</configQUEUE_REGISTRY_SIZE>
+				<configUSE_MUTEXES>1</configUSE_MUTEXES>
+				<configUSE_RECURSIVE_MUTEXES>1</configUSE_RECURSIVE_MUTEXES>
+				<configUSE_COUNTING_SEMAPHORES>1</configUSE_COUNTING_SEMAPHORES>
+				<configTASK_RETURN_ADDRESS>NULL</configTASK_RETURN_ADDRESS>
 				<configTASK_RETURN_ADDRESS_UI>0</configTASK_RETURN_ADDRESS_UI>
+				<configUSE_TIMERS>1</configUSE_TIMERS>
+				<configTIMER_QUEUE_LENGTH>5</configTIMER_QUEUE_LENGTH>
+				<configTIMER_TASK_STACK_DEPTH>400</configTIMER_TASK_STACK_DEPTH>
+				<configUSE_CO_ROUTINES>0</configUSE_CO_ROUTINES>
+				<configUSE_PREEMPTION>1</configUSE_PREEMPTION>
+				<configUSE_TIME_SLICING>1</configUSE_TIME_SLICING>
+				<configINCLUDE_APPLICATION_DEFINED_PRIVILEGED_FUNCTIONS>0</configINCLUDE_APPLICATION_DEFINED_PRIVILEGED_FUNCTIONS>
+				<configIDLE_SHOULD_YIELD>1</configIDLE_SHOULD_YIELD>
+				<configUSE_TICKLESS_IDLE>0</configUSE_TICKLESS_IDLE>
+				<configTICK_RATE_HZ>1000</configTICK_RATE_HZ>
+				<configCPU_CLOCK_HZ>1000</configCPU_CLOCK_HZ>
+				<configUSE_IDLE_HOOK>0</configUSE_IDLE_HOOK>
+				<configUSE_TICK_HOOK>0</configUSE_TICK_HOOK>
+				<configUSE_MALLOC_FAILED_HOOK>1</configUSE_MALLOC_FAILED_HOOK>
+				<configUSE_DAEMON_TASK_STARTUP_HOOK>0</configUSE_DAEMON_TASK_STARTUP_HOOK>
+				<configCHECK_FOR_STACK_OVERFLOW>2</configCHECK_FOR_STACK_OVERFLOW>
+				<configGENERATE_RUN_TIME_STATS>0</configGENERATE_RUN_TIME_STATS>
+				<configUSE_TRACE_FACILITY>0</configUSE_TRACE_FACILITY>
+				<configUSE_STATS_FORMATTING_FUNCTIONS>0</configUSE_STATS_FORMATTING_FUNCTIONS>
+				<portGET_RUN_TIME_COUNTER_VALUE>( ( uint32_t ) ( alt_globaltmr_get64() &gt;&gt; ( uint64_t ) 16 ) )</portGET_RUN_TIME_COUNTER_VALUE>
+				<INCLUDE_xResumeFromISR>0</INCLUDE_xResumeFromISR>
+				<INCLUDE_xTaskResumeFromISR>0</INCLUDE_xTaskResumeFromISR>
+				<INCLUDE_xEventGroupSetBitFromISR>0</INCLUDE_xEventGroupSetBitFromISR>
+				<INCLUDE_vTaskPrioritySet>1</INCLUDE_vTaskPrioritySet>
+				<INCLUDE_uxTaskPriorityGet>1</INCLUDE_uxTaskPriorityGet>
+				<INCLUDE_vTaskDelete>1</INCLUDE_vTaskDelete>
+				<INCLUDE_vTaskSuspend>1</INCLUDE_vTaskSuspend>
+				<INCLUDE_xTaskDelayUntil>1</INCLUDE_xTaskDelayUntil>
+				<INCLUDE_vTaskDelay>1</INCLUDE_vTaskDelay>
+				<INCLUDE_xTaskGetSchedulerState>0</INCLUDE_xTaskGetSchedulerState>
+				<INCLUDE_xTaskGetCurrentTaskHandle>0</INCLUDE_xTaskGetCurrentTaskHandle>
+				<INCLUDE_uxTaskGetStackHighWaterMark>0</INCLUDE_uxTaskGetStackHighWaterMark>
+				<INCLUDE_xTaskGetIdleTaskHandle>0</INCLUDE_xTaskGetIdleTaskHandle>
+				<INCLUDE_eTaskGetState>1</INCLUDE_eTaskGetState>
+				<INCLUDE_xTaskAbortDelay>0</INCLUDE_xTaskAbortDelay>
+				<INCLUDE_xTaskGetHandle>0</INCLUDE_xTaskGetHandle>
+				<INCLUDE_vTaskCleanUpResources>1</INCLUDE_vTaskCleanUpResources>
+				<INCLUDE_xSemaphoreGetMutexHolder>0</INCLUDE_xSemaphoreGetMutexHolder>
+				<INCLUDE_userStartupTask>1</INCLUDE_userStartupTask>
+				<INCLUDE_xTimerPendFunctionCall>1</INCLUDE_xTimerPendFunctionCall>
+				<configINTERRUPT_CONTROLLER_CPU_INTERFACE_OFFSET>0</configINTERRUPT_CONTROLLER_CPU_INTERFACE_OFFSET>
+				<configINTERRUPT_CONTROLLER_BASE_ADDRESS>0</configINTERRUPT_CONTROLLER_BASE_ADDRESS>
+				<configUNIQUE_INTERRUPT_PRIORITIES>0</configUNIQUE_INTERRUPT_PRIORITIES>
+				<configSETUP_TICK_INTERRUPT>vConfigureTickInterrupt();</configSETUP_TICK_INTERRUPT>
+				<FREERTOS_COMMIT_ID>f115d71a1c3d159fcb6f150036c88d6108549509</FREERTOS_COMMIT_ID>
 			</freertos-addin-cfg>
 		</configuration>
 	</configurations>

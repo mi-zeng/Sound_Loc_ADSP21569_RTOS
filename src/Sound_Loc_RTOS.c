@@ -16,6 +16,15 @@
 #include "FreeRTOSUserApplication.h"
 #include "Sound_Loc_RTOS.h"
 
+//
+#include "GPIO.h"
+#include "SPORT_driver.h"
+#include "SPU_init.h"
+#include "UART.h"
+#include "SRU_init.h"
+
+//static funciton
+static void Driver_Init(void);
 /** 
  * If you want to use command program arguments, then place them in the following string. 
  */
@@ -29,8 +38,9 @@ int main(int argc, char *argv[])
 	 * @return zero on success 
 	 */
 	adi_initComponents();
-	
 	/* Begin adding your custom code here */
+
+	Driver_Init();
 
 	/* When using FreeRTOS calls to SSL/DD cannot be made until the scheduler is active.
 	To ensure that devices are initialized before tasks are started place your code
@@ -57,5 +67,25 @@ int main(int argc, char *argv[])
 	vTaskStartScheduler();
 
 	return 0;
+}
+
+static void Driver_Init(void)
+{
+    /* SPU initialization */
+    SPU_init();
+
+	/* SRU Configuration */
+    SRU_init();
+
+    /*GPIO init*/
+    LED_init();
+
+    /*KEY init*/
+    KEY_init();
+
+    /*I2S init*/
+    Sport_Init();
+
+    //adding hardware test if possible
 }
 

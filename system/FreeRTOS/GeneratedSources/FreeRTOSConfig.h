@@ -1,5 +1,5 @@
 /*
- * Source file generated on 四月 3, 2024 at 09:59:23 
+ * Source file generated on 四月 8, 2024 at 16:21:34 
  * by the FreeRTOS Add-In for CrossCore Embedded Studio.
  *
  * This file is generated automatically based upon the options selected in 
@@ -50,7 +50,7 @@
 
 /**RTOS Behavior**/
 #define configUSE_PREEMPTION                                      1 
-#define configUSE_TIME_SLICING                                    0 
+#define configUSE_TIME_SLICING                                    1 
 #define configIDLE_SHOULD_YIELD                                   1 
 #define configUSE_TICKLESS_IDLE                                   0 
 #define configTICK_RATE_HZ                                        ( ( TickType_t ) 1000 ) 
@@ -60,7 +60,7 @@
 #define configUSE_IDLE_HOOK                                       0 
 #define configUSE_TICK_HOOK                                       0 
 #define configUSE_MALLOC_FAILED_HOOK                              1 
-#define configUSE_DAEMON_TASK_STARTUP_HOOK                        1 
+#define configUSE_DAEMON_TASK_STARTUP_HOOK                        0 
 #define configCHECK_FOR_STACK_OVERFLOW                            2 
 
 /**Debugging & Profiling**/

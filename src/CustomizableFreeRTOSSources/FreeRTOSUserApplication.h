@@ -17,6 +17,10 @@ extern "C" {
 #endif
 
 void userStartupTask( void* );
+void LED_Blink_Task( void* );
+void Loc_Task( void* );
+
+extern TaskHandle_t LocTask_Handle;
 
 #ifdef __cplusplus
 }
