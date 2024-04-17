@@ -65,7 +65,7 @@ void userStartupTask(void *pvParameters)
 
 	taskEXIT_CRITICAL();
 
-	//after all source has been delete itself
+	//after all task has been created, deleted self
 	vTaskDelete(NULL);
 
 	for ( ; ; )

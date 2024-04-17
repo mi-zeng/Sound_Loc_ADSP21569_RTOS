@@ -1,5 +1,5 @@
 /*
-** adi_initialize.c source file generated on 四月 3, 2024 at 09:59:40.
+** adi_initialize.c source file generated on 四月 12, 2024 at 11:13:14.
 **
 ** Copyright (C) 2000-2024 Analog Devices Inc., All Rights Reserved.
 **

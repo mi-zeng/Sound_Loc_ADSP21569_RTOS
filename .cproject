@@ -7,6 +7,7 @@
 					<stringMacro name="sport-driver-version" type="VALUE_TEXT" value="1.0"/>
 					<stringMacro name="rtos-vendor" type="VALUE_TEXT" value="Analog Devices, Inc."/>
 					<stringMacro name="uart-driver-version" type="VALUE_TEXT" value="1.0"/>
+					<stringMacro name="spu-service-version" type="VALUE_TEXT" value="1.0"/>
 					<stringMacro name="component-type" type="VALUE_TEXT" value="RTOS"/>
 					<stringMacro name="spi-driver-version" type="VALUE_TEXT" value="1.0"/>
 					<stringMacro name="dai-service-version" type="VALUE_TEXT" value="1.0"/>
@@ -123,6 +124,7 @@
 					<stringMacro name="sport-driver-version" type="VALUE_TEXT" value="1.0"/>
 					<stringMacro name="rtos-vendor" type="VALUE_TEXT" value="Analog Devices, Inc."/>
 					<stringMacro name="uart-driver-version" type="VALUE_TEXT" value="1.0"/>
+					<stringMacro name="spu-service-version" type="VALUE_TEXT" value="1.0"/>
 					<stringMacro name="component-type" type="VALUE_TEXT" value="RTOS"/>
 					<stringMacro name="spi-driver-version" type="VALUE_TEXT" value="1.0"/>
 					<stringMacro name="dai-service-version" type="VALUE_TEXT" value="1.0"/>

@@ -80,6 +80,10 @@ It provides information needed to link your code. It can be used to configure me
 			<component-description><![CDATA[This add-in provides Analog Devices' implementation of the Serial Peripheral Interface driver (SPI)]]></component-description>
 			<product name="Analog Devices System Services and Device Drivers" version="1.0.0"/>
 		</component>
+		<component id="com.analog.crosscore.addins.ssldd.spu.sharcxi" name="SPU Service for SHARC" version="1.0.0" visible="true">
+			<component-description><![CDATA[This add-in provides Analog Devices' implementation of the System Protection Unit(SPU)]]></component-description>
+			<product name="Analog Devices System Services and Device Drivers" version="1.0.0"/>
+		</component>
 	</installedComponents>
 	<configurations>
 		<configuration id="com.analog.crosscore.ssldd.pinmux.component">
